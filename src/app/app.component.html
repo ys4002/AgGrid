@@ -1,0 +1,22 @@
+<ag-grid-angular
+    #myGrid
+    style="height: 500px;"
+    class="ag-theme-balham"
+
+    [masterDetail]="true"
+    [icons]="icons"
+    [columnDefs]="columnDefs"
+    [gridOptions]="gridOptions"
+    [cacheOverflowSize]="cacheOverflowSize"
+    [maxConcurrentDatasourceRequests]="maxConcurrentDatasourceRequests"
+    [infiniteInitialRowCount]="infiniteInitialRowCount"
+    [detailCellRenderer]="detailCellRenderer"
+    [frameworkComponents]="frameworkComponents"
+    [rowModelType]="'serverSide'"
+    [cacheBlockSize]="50" 
+    [rowBuffer]="0"
+    
+    (cellClicked)="onCellClicked($event)"
+    (gridReady)="onGridReady($event)"
+    (paginationChanged)="onPaginationChanged($event)"
+>
